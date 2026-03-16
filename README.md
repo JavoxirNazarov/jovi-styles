@@ -7,7 +7,13 @@ It ships the original Gagra token set, light/dark themes, responsive breakpoints
 ## Install
 
 ```bash
-yarn add /Users/javoxirnazarov/Desktop/jovi-styles
+yarn add github:JavoxirNazarov/jovi-styles
+```
+
+Or with npm:
+
+```bash
+npm install github:JavoxirNazarov/jovi-styles
 ```
 
 Peer dependencies expected in your app:
