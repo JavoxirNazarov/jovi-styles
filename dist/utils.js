@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getAdaptiveHeight = exports.getAdaptiveWidth = exports.DESIGN_HEIGHT = exports.DESIGN_WIDTH = void 0;
+const react_native_1 = require("react-native");
+exports.DESIGN_WIDTH = 390;
+exports.DESIGN_HEIGHT = 844;
+const getAdaptiveWidth = (size, currentWidth = react_native_1.Dimensions.get('window').width) => size * (currentWidth / exports.DESIGN_WIDTH);
+exports.getAdaptiveWidth = getAdaptiveWidth;
+const getAdaptiveHeight = (size, currentHeight = react_native_1.Dimensions.get('window').height) => size * (currentHeight / exports.DESIGN_HEIGHT);
+exports.getAdaptiveHeight = getAdaptiveHeight;
