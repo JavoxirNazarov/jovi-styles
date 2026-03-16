@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAdaptiveWidth = exports.getAdaptiveHeight = exports.DESIGN_WIDTH = exports.DESIGN_HEIGHT = exports.getBreakpointForWidth = exports.defaultBreakpoints = exports.breakpoints = exports.useThemeName = exports.useThemeContext = exports.useTheme = exports.useStyles = exports.useStyleProvider = exports.useBreakpoint = exports.useAppearance = exports.createStylesheet = exports.ThemeProvider = exports.StyleProvider = exports.DEFAULT_THEME_STORAGE_KEY = void 0;
+exports.getAdaptiveWidth = exports.getAdaptiveHeight = exports.DESIGN_WIDTH = exports.DESIGN_HEIGHT = exports.getBreakpointForWidth = exports.defaultBreakpoints = exports.breakpoints = exports.useThemeName = exports.useThemeContext = exports.useTheme = exports.useStyles = exports.useStyleProvider = exports.useBreakpoint = exports.useAppearance = exports.createStylesheet = exports.StyleProvider = exports.DEFAULT_THEME_STORAGE_KEY = void 0;
 var context_1 = require("./context");
 Object.defineProperty(exports, "DEFAULT_THEME_STORAGE_KEY", { enumerable: true, get: function () { return context_1.DEFAULT_THEME_STORAGE_KEY; } });
 Object.defineProperty(exports, "StyleProvider", { enumerable: true, get: function () { return context_1.StyleProvider; } });
-Object.defineProperty(exports, "ThemeProvider", { enumerable: true, get: function () { return context_1.ThemeProvider; } });
 var hooks_1 = require("./hooks");
 Object.defineProperty(exports, "createStylesheet", { enumerable: true, get: function () { return hooks_1.createStylesheet; } });
 Object.defineProperty(exports, "useAppearance", { enumerable: true, get: function () { return hooks_1.useAppearance; } });

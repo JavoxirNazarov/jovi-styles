@@ -1,8 +1,4 @@
-export {
-  DEFAULT_THEME_STORAGE_KEY,
-  StyleProvider,
-  ThemeProvider,
-} from './context';
+export { DEFAULT_THEME_STORAGE_KEY, StyleProvider } from "./context";
 export {
   createStylesheet,
   useAppearance,
@@ -12,19 +8,19 @@ export {
   useTheme,
   useThemeContext,
   useThemeName,
-} from './hooks';
+} from "./hooks";
 
 export {
   breakpoints,
   defaultBreakpoints,
   getBreakpointForWidth,
-} from './breakpoints';
+} from "./breakpoints";
 export {
   DESIGN_HEIGHT,
   DESIGN_WIDTH,
   getAdaptiveHeight,
   getAdaptiveWidth,
-} from './utils';
+} from "./utils";
 export type {
   Appearance,
   Theme,
@@ -33,4 +29,4 @@ export type {
   ThemingConfig,
   ThemeProviderProps,
   ThemeStorage,
-} from './types';
+} from "./types";

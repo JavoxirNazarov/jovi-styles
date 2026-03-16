@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.StyleProvider = exports.ThemeProvider = exports.ThemeContext = exports.DEFAULT_THEME_STORAGE_KEY = void 0;
+exports.StyleProvider = exports.ThemeContext = exports.DEFAULT_THEME_STORAGE_KEY = void 0;
 const jsx_runtime_1 = require("react/jsx-runtime");
 const react_1 = require("react");
 const react_native_1 = require("react-native");
@@ -66,5 +66,4 @@ const ThemeProvider = ({ children, defaultTheme, storage, storageKey = exports.D
     ]);
     return ((0, jsx_runtime_1.jsx)(exports.ThemeContext.Provider, { value: contextValue, children: children }));
 };
-exports.ThemeProvider = ThemeProvider;
-exports.StyleProvider = exports.ThemeProvider;
+exports.StyleProvider = ThemeProvider;

@@ -48,7 +48,7 @@ const useAdaptiveTheme = ({
   return { themeName, setAppearance: handleSetAppearance, appearance };
 };
 
-export const ThemeProvider = ({
+const ThemeProvider = ({
   children,
   defaultTheme,
   storage,
