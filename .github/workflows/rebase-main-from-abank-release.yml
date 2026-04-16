@@ -35,7 +35,7 @@ jobs:
       - name: Configure git identity
         run: |
           git config user.name "main-updater[bot]"
-          git config user.email "12345+main-updater[bot]@users.noreply.github.com"
+          git config user.email "1234+main-updater[bot]@users.noreply.github.com"
 
       - name: Rebase main onto develop
         env:
