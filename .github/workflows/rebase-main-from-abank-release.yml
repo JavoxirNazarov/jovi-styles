@@ -1,0 +1,48 @@
+name: Rebase main from develop
+
+on:
+  push:
+    branches:
+      - develop
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebase-main-from-abank-release
+  cancel-in-progress: true
+
+jobs:
+  rebase-main:
+    name: Rebase main using gagra app
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create GitHub App token
+        id: app-token
+        # These secrets should belong to the "gagra app" GitHub App.
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          fetch-depth: 0
+
+      - name: Configure git identity
+        run: |
+          git config user.name "main-updater[bot]"
+          git config user.email "12345+main-updater[bot]@users.noreply.github.com"
+
+      - name: Rebase main onto develop
+        env:
+          RELEASE_BRANCH: develop
+          TARGET_BRANCH: main
+        run: |
+          git fetch origin "$RELEASE_BRANCH" "$TARGET_BRANCH"
+          git checkout "$TARGET_BRANCH"
+          git rebase "origin/$RELEASE_BRANCH"
+          git push --force-with-lease origin "HEAD:$TARGET_BRANCH"
