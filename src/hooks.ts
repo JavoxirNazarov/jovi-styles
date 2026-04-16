@@ -1,7 +1,7 @@
-import { useContext, useMemo } from 'react';
-import type { ImageStyle, TextStyle, ViewStyle } from 'react-native';
-import type { ThemeContextValue } from './types';
-import { ThemeContext } from './context';
+import { useContext, useMemo } from "react";
+import type { ImageStyle, TextStyle, ViewStyle } from "react-native";
+import type { ThemeContextValue } from "./types";
+import { ThemeContext } from "./context";
 
 type StyleValue = ViewStyle | TextStyle | ImageStyle;
 type StyleFunction = (...args: any[]) => StyleValue;
@@ -15,7 +15,7 @@ export const useThemeContext = (): ThemeContextValue => {
   const context = useContext(ThemeContext);
 
   if (!context) {
-    throw new Error('useThemeContext must be used within a ThemeProvider');
+    throw new Error("useThemeContext must be used within a ThemeProvider");
   }
 
   return context;
